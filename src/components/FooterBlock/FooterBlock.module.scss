@@ -1,0 +1,17 @@
+.wrapper {
+    background-color: blue;
+
+    .flexWrap {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-size: 20px;
+            color: white;
+        }
+
+    }
+
+}
