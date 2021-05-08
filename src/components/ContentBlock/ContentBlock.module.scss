@@ -1,24 +1,22 @@
 .wrapper {
-    // background-color: beige;
     text-align: center;
-    margin-top: 0;
- 
-    .title{
-        font-size: 30px;
-        padding-top: 30px;
+    margin: 0;
+
+    .cardWrap {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 50px;
     }
 
-    .textWrap{
-      width: 80%;
-      margin: auto;
-      margin-top: 50px;
-      padding-bottom: 30px;
-    }
-
-    
-    .text{
-        font-size: 15px;
-        line-height: 30px;
+    .textWrap {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        padding-bottom: 30px;
     }
 
 }

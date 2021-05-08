@@ -2,13 +2,33 @@ import React from 'react'
 
 import style from './ContentBlock.module.scss';
 
-const ContentBlock = ({ contentText, contentTitle }) => {
+import Card from '../Card';
+
+
+const ContentBlock = ({ children, wordsList, bgColor }) => {
+
+    const styles = {
+        background: `${bgColor}`
+    };
+
     return (
-        <div className={style.wrapper}>
-            {contentTitle && <h1 className={style.title}>{contentTitle}</h1>}
+        <div className={style.wrapper} style={styles}>
             <div className={style.textWrap}>
-                {contentText && <p className={style.text}>{contentText}</p>}
+                {children}
             </div>
+            {wordsList ?
+                (
+                    <div className={style.cardWrap}>
+                        {wordsList.map((item, index) => {
+                            return (
+                                <Card key={index} eng={item.eng} uk={item.uk} />
+                            )
+                        })}
+                    </div>
+                )
+                :
+                null
+            }
         </div>
     )
 }
